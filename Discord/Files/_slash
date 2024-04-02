@@ -1,0 +1,14 @@
+#!/bin/python
+import interactions
+
+bot = interactions.Client(token="MTIyMzk4ODEzNzcwNjEyNzQ0MA.G8puu3.XnuGVEsL0ePhDthVzpQuePvIadKF3MTHuMqpkg")
+
+@bot.command(
+    name="my_first_command",
+    description="This is the first command I made!",
+    scope=1223975747946020906,
+)
+async def my_first_command(ctx: interactions.CommandContext):
+    await ctx.send("Hi there!")
+
+bot.start()
